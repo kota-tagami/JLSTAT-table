@@ -68,10 +68,7 @@ dt10 <-
       fct_inorder(),
     age = age %>% 
       fct_collapse(
-        "85歳以上" = c(
-          "85~89歳", "90~94歳", "95~99歳",
-          "100+歳"
-        )
+        "100歳以上" = c("100+歳"),
       ),
     sex = sex %>% 
       fct_inorder(),
