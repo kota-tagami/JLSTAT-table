@@ -80,7 +80,9 @@ df_stats <-
   mutate(
     across(where(is.character), stringi::stri_trans_nfkc),
     var_lab = if_else(is.na(var_lab), name, var_lab),
-    val_lab = if_else(is.na(val_lab), value, val_lab)
+    val_lab = if_else(is.na(val_lab), value, val_lab),
+    value = value %>% 
+      as.numeric(),
   ) %>% 
   select(-c(name, value)) %>% 
   pivot_wider(names_from = var_lab, values_from = val_lab)
