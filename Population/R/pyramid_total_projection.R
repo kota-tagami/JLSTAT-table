@@ -5,6 +5,7 @@ source("helper.R")
 
 ## https://www.ipss.go.jp/pp-zenkoku/j/zenkoku2017/db_zenkoku2017/db_zenkoku2017syosaikekka.html
 ## 2022-11-07
+## 出生中位(死亡中位)推計
 
 data_name <- "1-9a.xls"
 data_path <- str_c("Population", "Source", data_name, sep = "/")
